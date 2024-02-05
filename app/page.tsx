@@ -44,7 +44,8 @@ export default function Home() {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        // @ts-ignore
+        document.querySelector(e.target.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
       });
